@@ -1,0 +1,61 @@
+# I want a function that will convert English language numbers into 
+# English Language Words.
+# For example:
+# number_to_english('1') #=> one 
+# number_to_english('96') #=> ninety six
+# The function should at least work up to One Hundred.
+
+def english(word_or_words)_to_number
+  if number == nil #in case recursive call has no argument
+  	number = ''
+  end
+  word_or_words_hash = {
+  	'1' => one,
+  	'2' => two,
+  	'3' => three,
+  	'4' => four,
+  	'5' => five,
+  	'6' => six,
+  	'7' => seven,
+  	'8' => eight,
+  	'9' => nine,
+  	'10' => ten,
+  	'11' => eleven,
+  	'12' => twelve,
+  	'13' => thirteen,
+  	'14' => fourteen,
+  	'15' => fifteen,
+  	'16' => sixteen,
+  	'17' => seventeen,
+  	'18' => eighteen,
+  	'19' => nineteen,
+  	'20' => twenty,
+  	'30' => thirty,
+  	'40' => forty,
+  	'50' => fifty,
+  	'60' => sixty,
+  	'70' => seventy,
+  	'80' => eighty,
+  	'90' => ninety
+  }  
+  if numbers.include?('1_000_000')
+  	millions, remainder = numbers.split('1_000_000')
+  	return number_to_english(millions) * 1_000_000 + number_to_english(remainder)
+  elsif word_or_words.include?('1_000')
+  	thousands, remainder = word_or_words.split('1_000')
+  	return number_to_english(thousands) * thousand + number_to_english(remainder)
+  elsif word_or_words.include?('100')
+    hundreds, remainder = word_or_words.split('100')
+    return number_to_english(hundreds) * hundred + number_to_english(remainder)
+  end
+  array_of_words = word_or_words.split
+  array_of_words.inject(0){|sum, string| sum + number_hash[string]}
+end
+
+puts number_to_english('1') #=> one
+puts number_to_english('20') #=> twenty
+puts number_to_english('25') #=> twenty five
+puts number_to_english('100') #=> one hundred
+puts number_to_english('632') #=> six hundred thirty two
+puts number_to_english('4812') #=> four thousand eight hundred twelve
+puts number_to_english('917000036') #=> nine hundred seventeen million thirty six
