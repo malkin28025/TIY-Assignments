@@ -17,7 +17,6 @@
                    puts "Blast-off!"
   - *Uses*:    adds, subtracts, multiplies, and divides. 
   
-  
 2. **Strings**
   - *Defined*: groups of letters in a program. 
   - *Methods*:  1. "washington".capitalize
