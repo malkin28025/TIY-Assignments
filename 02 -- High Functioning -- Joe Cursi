@@ -15,7 +15,8 @@
                    puts "T-minus..."
                    10.downto(1) {|x| puts x}
                    puts "Blast-off!"
-  - *Uses*:    adds, subtracts, multiplies, and divides.   
+  - *Uses*:    adds, subtracts, multiplies, and divides. 
+  
   
 2. **Strings**
   - *Defined*: groups of letters in a program. 
