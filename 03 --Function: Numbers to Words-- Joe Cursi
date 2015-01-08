@@ -41,15 +41,15 @@ def english(word_or_words)_to_number
   if numbers.include?('1_000_000')
   	millions, remainder = numbers.split('1_000_000')
   	return number_to_english(millions) * 1_000_000 + number_to_english(remainder)
-  elsif word_or_words.include?('1_000')
-  	thousands, remainder = word_or_words.split('1_000')
+  elsif numbers.include?('1_000')
+  	thousands, remainder = numbers.split('1_000')
   	return number_to_english(thousands) * thousand + number_to_english(remainder)
-  elsif word_or_words.include?('100')
-    hundreds, remainder = word_or_words.split('100')
+  elsif numbers.include?('100')
+    hundreds, remainder = numbers.split('100')
     return number_to_english(hundreds) * hundred + number_to_english(remainder)
   end
-  array_of_words = word_or_words.split
-  array_of_words.inject(0){|sum, string| sum + number_hash[string]}
+  array_of_numbers = word_or_words.split
+  array_of_numbers.inject(0){|sum, string| sum + number_hash[string]}
 end
 
 puts number_to_english('1') #=> one
