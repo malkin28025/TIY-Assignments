@@ -12,7 +12,7 @@ def english(word_or_words)_to_number
   	number = ''
   end
   word_or_words_hash = {
-    '0' => zero,
+      '0' => zero,
   	'1' => one,
   	'2' => two,
   	'3' => three,
