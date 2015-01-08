@@ -5,6 +5,8 @@
 # number_to_english('96') #=> ninety six
 # The function should at least work up to One Hundred.
 
+class Fixnum
+
 def english(word_or_words)_to_number
   if number == nil #in case recursive call has no argument
   	number = ''
@@ -59,3 +61,49 @@ puts number_to_english('100') #=> one hundred
 puts number_to_english('632') #=> six hundred thirty two
 puts number_to_english('4812') #=> four thousand eight hundred twelve
 puts number_to_english('917000036') #=> nine hundred seventeen million thirty six
+
+
+
+
+
+
+
+
+# I want a method that will convert integers into their Roman numeral representation.
+# For example:
+# 3.to_roman => "III"
+# 15.to_roman => "XV"
+# 50.to_roman => "L"
+
+class Fixnum
+
+  def to_roman
+    if self == 0
+      ""
+    elsif self <= 3
+      "I" * self
+    elsif self == 4
+      "IV"
+    elsif self <= 8
+      "V" + (self - 5).to_roman
+    elsif self == 9
+      "IX"
+    else
+      "X" + (self - 10).to_roman
+    elsif self == 50
+      "L" + (self - 50). to roman
+    elsif self == 100
+      "M" + (self - 100). to roman
+    elsif self == 1000
+      "M" + (self - 1000). to roman  
+    end
+  end
+end
+
+def test(actual_value, expectation)
+  if actual_value == expectation
+    puts "success"
+  else
+    puts "expected #{expectation} but got #{actual_value}"
+  end
+end
