@@ -1,3 +1,0 @@
-TIY-Assignments
-===============
-BLAH
